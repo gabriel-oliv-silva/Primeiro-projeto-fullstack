@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="Author" content="Gabriel" />
+    <meta name="description" content="Primeiro projeto completo" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="shortcut icon" href="./img/logo.png" type="image/png" />
+    <title>Projeto</title>
+  </head>
+  <body>
+    <header>
+      <h1>Gerenciamento de dados</h1>
+    </header>
+    <main>
+      <div id="minha-falha" class="falha" style="display: none"></div>
+      <div id="minha-mensagem" class="mensagem" style="display: none"></div>
+
+      <div class="sidebar">
+        <button onclick="showPage('create')">Criar</button>
+        <br />
+        <button onclick="showPage('read')">Listar</button>
+        <br />
+
+        <button onclick="showPage('update')">Atualizar</button>
+        <br />
+
+        <button onclick="showPage('delete')">Deletar</button>
+      </div>
+
+      <div class="content">
+        <section id="create" class="page">
+          <h2>Cadastro</h2>
+          <form id="formulario" method="post">
+            <label for="nome">Nome:</label> <br />
+            <span title="Insira o seu nome:">
+              <input
+                type="text"
+                id="nome"
+                name="nome"
+                required
+                placeholder="Insira o seu nome"
+              />
+            </span>
+            <br />
+            <br />
+
+            <label for="idade">Idade:</label> <br />
+            <span title="Insira a sua idade">
+              <input
+                type="number"
+                id="idade"
+                name="idade"
+                required
+                placeholder="Insira a sua idade"
+              />
+            </span>
+            <br />
+            <br />
+            <input type="reset" value="Limpar" />
+            <input type="submit" value="Enviar" />
+          </form>
+          <script src="./js/create.js"></script>
+        </section>
+        <section id="read" class="page" style="display: none">
+          <h2>Listagem</h2>
+          <form id="IDListar">
+            <ul id="listaUser"></ul>
+          </form>
+          <script src="./js/list.js"></script>
+        </section>
+        <section id="update" class="page" style="display: none">
+          <h2>Atualizar</h2>
+          <form id="IDAtualizar">
+            <label for="cod">Insira o id:</label> <br />
+            <span title="Insira o id do usuário que deseja atualizar">
+              <input
+                type="number"
+                id="cod"
+                required
+                placeholder="Insira o id"
+              />
+            </span>
+            <br />
+            <br />
+            <label for="nomeAtualizar">Insira o novo nome:</label> <br />
+            <span title="Insira o novo nome">
+              <input
+                type="text"
+                id="nomeAtualizar"
+                name="nome"
+                required
+                placeholder="Insira o seu nome"
+              />
+            </span>
+            <br />
+            <br />
+            <label for="idadeAtualizar">Insira a nova idade:</label> <br />
+            <span title="Insira a nova idade">
+              <input
+                type="number"
+                id="idadeAtualizar"
+                name="idade"
+                required
+                placeholder="Insira a sua idade"
+              />
+            </span>
+            <br />
+            <br />
+            <input type="reset" value="Limpar" />
+            <input type="submit" value="Enviar" />
+          </form>
+          <script src="./js/update.js"></script>
+        </section>
+        <section id="delete" class="page" style="display: none">
+          <h2>Deletar</h2>
+
+          <form id="IDDeletar" method="post">
+            <label for="code">Insira o id:</label> <br />
+            <span title="Insira o id do usuário que deseja deletar">
+              <input
+                type="number"
+                id="code"
+                required
+                placeholder="Insira o id"
+              />
+            </span>
+            <br />
+            <br />
+            <input type="submit" value="Deletar" />
+          </form>
+          <script src="./js/delete.js"></script>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <hr />
+      Obrigado por participar!
+    </footer>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

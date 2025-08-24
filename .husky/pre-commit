@@ -1,0 +1,8 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+# Rodar lint antes de commitar
+npx eslint . --fix
+
+# Rodar testes
+npx jest

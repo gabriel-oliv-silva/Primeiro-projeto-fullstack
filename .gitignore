@@ -1,0 +1,32 @@
+# Java / Spring Boot
+
+*.class
+*.jar
+*.war
+*.ear
+*.iml
+*.log
+*.tmp
+*.swp
+*.DS_Store
+out/
+target/
+build/
+
+# Spring Boot / IDE
+
+.vscode/
+.idea/
+*.h2.db
+
+# Node (Husky / Changelog)
+
+node_modules/
+
+# Logs e temporários gerais
+
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
