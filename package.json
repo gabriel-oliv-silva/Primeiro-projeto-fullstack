@@ -1,6 +1,6 @@
 {
   "name": "primeiro-projeto-completo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Projeto fullstack com versionamento automático",
   "main": "index.js",
   "repository": {
@@ -36,16 +36,39 @@
     },
     "header": "# Changelog \n\nTodas as mudanças importantes estão listadas abaixo.\n",
     "types": [
-      { "type": "feat", "section": "Features" },
-      { "type": "fix", "section": "Bug Fixes" },
-      { "type": "chore", "section": "Chores" },
-      { "type": "docs", "section": "Documentation" },
-      { "type": "refactor", "section": "Refactors" },
-      { "type": "style", "section": "Styles" },
-      { "type": "test", "section": "Tests" }
+      {
+        "type": "feat",
+        "section": "Features"
+      },
+      {
+        "type": "fix",
+        "section": "Bug Fixes"
+      },
+      {
+        "type": "chore",
+        "section": "Chores"
+      },
+      {
+        "type": "docs",
+        "section": "Documentation"
+      },
+      {
+        "type": "refactor",
+        "section": "Refactors"
+      },
+      {
+        "type": "style",
+        "section": "Styles"
+      },
+      {
+        "type": "test",
+        "section": "Tests"
+      }
     ]
   },
   "commitlint": {
-    "extends": ["@commitlint/config-conventional"]
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
   }
 }
