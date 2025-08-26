@@ -1,11 +1,16 @@
 {
   "name": "primeiro-projeto-completo",
   "version": "1.0.1",
-  "description": "",
+  "description": "Projeto fullstack com versionamento automático",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabriel-oliv-silva/Primeiro-projeto-fullstack.git"
+  },
   "scripts": {
-    "prepare": "husky",
-    "release": "standard-version"
+    "prepare": "husky install",
+    "release": "standard-version",
+    "cz": "git-cz"
   },
   "config": {
     "commitizen": {
@@ -23,5 +28,23 @@
     "cz-conventional-changelog": "^3.3.0",
     "husky": "^9.1.7",
     "standard-version": "^9.5.0"
+  },
+  "standard-version": {
+    "scripts": {
+      "postbump": "git add CHANGELOG.md",
+      "postchangelog": "git add CHANGELOG.md"
+    },
+    "types": [
+      { "type": "feat", "section": "Features" },
+      { "type": "fix", "section": "Bug Fixes" },
+      { "type": "chore", "section": "Chores" },
+      { "type": "docs", "section": "Documentation" },
+      { "type": "refactor", "section": "Refactors" },
+      { "type": "style", "section": "Styles" },
+      { "type": "test", "section": "Tests" }
+    ]
+  },
+  "commitlint": {
+    "extends": ["@commitlint/config-conventional"]
   }
 }
