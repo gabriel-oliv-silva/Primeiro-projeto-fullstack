@@ -1,6 +1,6 @@
 {
   "name": "primeiro-projeto-completo",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "Projeto fullstack com versionamento automático",
   "main": "index.js",
   "repository": {
@@ -34,6 +34,7 @@
       "postbump": "git add CHANGELOG.md",
       "postchangelog": "git add CHANGELOG.md"
     },
+    "header": "# Changelog \n\nTodas as mudanças importantes estão listadas abaixo.\n",
     "types": [
       { "type": "feat", "section": "Features" },
       { "type": "fix", "section": "Bug Fixes" },
